@@ -10,6 +10,35 @@ description: >
 
 # Dev Rules
 
+## Invocación
+
+Al invocar `/dev-rules`, mostrar el siguiente resumen al usuario:
+
+```
+Dev Rules v1.0.0
+
+Comunicación  → Español, conciso, sin disculpas
+Estilo        → Convenciones del proyecto, nombres descriptivos
+Documentación → Solo el "por qué", TODOs para incompletos
+Git           → Conventional Commits, confirmar antes de commit/push
+Código        → SOLID, composición > herencia, early returns, SRP
+Arquitectura  → Capas separadas, DTOs, inyección de dependencias
+Performance   → Caché, lazy loading, paginación
+Errores       → Fail fast, logs por nivel, mensajes amigables
+Seguridad     → Sin secrets en código/logs, queries parametrizadas
+Testing       → Solo si se solicita
+Deploy        → No modificar sin confirmación, respetar entornos
+DB            → Sin queries destructivas sin confirmación
+
+Reglas por tecnología:
+  TS/Angular    → Sin any, inject(), async pipe, standalone + signals
+  Java/Spring   → Constructor injection, @Transactional, records, Jakarta
+  Flutter/Dart  → const constructors, sin !, trailing commas, Bloc/Riverpod
+  Kotlin/Compose→ PascalCase @Composable, Modifier en layout raíz
+```
+
+No agregar nada más. Solo mostrar el resumen.
+
 ## Idioma y Comunicación
 - Responder siempre en español.
 - Ser conciso pero completo.
