@@ -12,30 +12,28 @@ description: >
 
 ## Invocación
 
-Al invocar `/dev-rules`, mostrar el siguiente resumen al usuario:
+Al invocar /dev-rules, mostrar el siguiente resumen al usuario:
 
-```
 Dev Rules v1.0.0
 
-Comunicación  → Español, conciso, sin disculpas
-Estilo        → Convenciones del proyecto, nombres descriptivos
-Documentación → Solo el "por qué", TODOs para incompletos
-Git           → Conventional Commits, confirmar antes de commit/push
-Código        → SOLID, composición > herencia, early returns, SRP
-Arquitectura  → Capas separadas, DTOs, inyección de dependencias
-Performance   → Caché, lazy loading, paginación
-Errores       → Fail fast, logs por nivel, mensajes amigables
-Seguridad     → Sin secrets en código/logs, queries parametrizadas
-Testing       → Solo si se solicita
-Deploy        → No modificar sin confirmación, respetar entornos
-DB            → Sin queries destructivas sin confirmación
+Comunicación   - Español, conciso, sin disculpas
+Estilo         - Convenciones del proyecto, nombres descriptivos
+Documentación  - Solo el "por qué", TODOs para incompletos
+Git            - Conventional Commits, confirmar antes de commit/push
+Código         - SOLID, composición sobre herencia, early returns, SRP
+Arquitectura   - Capas separadas, DTOs, inyección de dependencias
+Performance    - Caché, lazy loading, paginación
+Errores        - Fail fast, logs por nivel, mensajes amigables
+Seguridad      - Sin secrets en código/logs, queries parametrizadas
+Testing        - Solo si se solicita
+Deploy         - No modificar sin confirmación, respetar entornos
+DB             - Sin queries destructivas sin confirmación
 
 Reglas por tecnología:
-  TS/Angular    → Sin any, inject(), async pipe, standalone + signals
-  Java/Spring   → Constructor injection, @Transactional, records, Jakarta
-  Flutter/Dart  → const constructors, sin !, trailing commas, Bloc/Riverpod
-  Kotlin/Compose→ PascalCase @Composable, Modifier en layout raíz
-```
+  TS/Angular     - Sin any, inject(), async pipe, standalone + signals
+  Java/Spring    - Constructor injection, Transactional, records, Jakarta
+  Flutter/Dart   - const constructors, trailing commas, Bloc/Riverpod
+  Kotlin/Compose - PascalCase Composable, Modifier en layout raíz
 
 No agregar nada más. Solo mostrar el resumen.
 
@@ -52,17 +50,17 @@ No agregar nada más. Solo mostrar el resumen.
 ## Documentación
 - Documentar solo decisiones técnicas importantes o lógica no obvia.
 - Comentarios solo para explicar el "por qué", nunca el "qué".
-- Usar `TODO` para código incompleto.
+- Usar TODO para código incompleto.
 
 ## Git y Control de Versiones
 - No hacer commit ni push sin confirmación explícita del usuario.
-- Conventional Commits: `feat:`, `fix:`, `docs:`, `chore:`, `refactor:`, `test:`, `ci:`.
-- Ramas descriptivas: `feature/`, `fix/`, `hotfix/`, `chore/`.
+- Conventional Commits: feat, fix, docs, chore, refactor, test, ci.
+- Ramas descriptivas: feature/, fix/, hotfix/, chore/.
 
 ## Código Limpio
 - Principios SOLID.
 - Composición sobre herencia.
-- Sin comentarios decorativos ni separadores visuales excesivos (`====`, `----`, checks).
+- Sin comentarios decorativos ni separadores visuales excesivos.
 - Early returns para condiciones de error (evitar nesting profundo).
 - Métodos/funciones pequeños con una sola responsabilidad.
 - DRY: extraer lógica duplicada solo cuando se repite 3+ veces.
@@ -74,27 +72,27 @@ No agregar nada más. Solo mostrar el resumen.
 - Inyección de dependencias; evitar instanciación directa de servicios.
 
 ## TypeScript/Angular
-- Evitar `any`; usar tipos específicos o `unknown`.
-- `inject()` para inyección de servicios.
-- `async` pipe para observables en templates.
+- Evitar any; usar tipos específicos o unknown.
+- inject() para inyección de servicios.
+- async pipe para observables en templates.
 - Preferir standalone components y signals.
 
 ## Java/Spring Boot
 - Constructor Injection (sin Field Injection en producción).
-- `@Transactional(readOnly = true)` para lecturas, `@Transactional` para escrituras.
+- Transactional(readOnly = true) para lecturas, Transactional para escrituras.
 - Java records para DTOs Request/Response.
 - Validar inputs con Jakarta Validation.
 
 ## Flutter/Dart
-- Constructores `const` para widgets inmutables.
-- Evitar `!` a menos que el valor esté garantizado no-nulo.
+- Constructores const para widgets inmutables.
+- Evitar el operador bang (!) a menos que el valor esté garantizado no-nulo.
 - Trailing commas para mejor formateo.
 - State management (Bloc/Riverpod) para apps complejas.
 
 ## Kotlin/Compose
-- Funciones `@Composable` en PascalCase como sustantivos.
-- Parámetros: obligatorios primero, luego `Modifier`, luego opcionales.
-- `Modifier` se aplica solo al layout raíz.
+- Funciones Composable en PascalCase como sustantivos.
+- Parámetros: obligatorios primero, luego Modifier, luego opcionales.
+- Modifier se aplica solo al layout raíz.
 
 ## Performance
 - Considerar el impacto en rendimiento de cada cambio.
@@ -103,7 +101,7 @@ No agregar nada más. Solo mostrar el resumen.
 
 ## Manejo de Errores
 - Fail fast: manejar errores al inicio de funciones.
-- Logear con nivel apropiado: `ERROR`, `WARN`, `INFO`, `DEBUG`.
+- Logear con nivel apropiado: ERROR, WARN, INFO, DEBUG.
 - Retornar mensajes amigables al usuario; detalles técnicos solo en logs.
 
 ## Seguridad
